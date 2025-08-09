@@ -9,7 +9,7 @@
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "sass sass/main.scss css/styles.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.comp.css -o css/styles.prefix.css",
-    "compress:css": "sass css/styles.prefix.css css/styles.css --output-style compressed",
+    "compress:css": "sass css/styles.prefix.css css/styles.css --style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css",
     "build": "parcel build index.html --dist-dir ./dist"
   },
@@ -22,5 +22,8 @@
     "parcel": "^2.8.3",
     "postcss-cli": "^10.1.0",
     "sass": "^1.90.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }
